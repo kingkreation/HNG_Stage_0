@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joshua Kolawole Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <article class="profile-card" data-testid="test-profile-card" aria-label="User profile card">
+    <div class="profile-grid">
+      <!-- Avatar -->
+      <figure class="avatar" data-testid="test-user-avatar-figure">
+        <img
+          src="https://i.imghippo.com/files/YnW7438cJc.png"
+          alt="Joshua profile photo"
+          data-testid="test-user-avatar"
+        />
+      </figure>
+
+      <!-- Main content -->
+      <div>
+        <header class="card-header" aria-label="profile header" data-testid="test-user-header">
+          <h2 class="name" data-testid="test-user-name" aria-label="user name">Joshua Kolawole</h2>
+          <div class="role" data-testid="test-user-role">Frontend Developer, Junior QA Engineer, Graphic Designer</div>
+          <p class="bio" data-testid="test-user-bio">
+            Hi, I’m Joshua Kolawole, popularly known as De King. I’m a frontend web developer, QA enthusiast, and creative technologist passionate about building clean, user-friendly digital experiences. I combine my background in Physics from Olabisi Onabanjo University with hands-on skills in HTML, CSS, JavaScript, and software testing to create functional and accessible web solutions. Beyond tech, I’m a musician and media creative, skilled in live sound, graphic design, and leadership through community impact.
+          </p>
+
+          <div class="meta-row">
+            <div class="time-chip" role="status" aria-live="polite" data-testid="test-user-time">0</div>
+            <nav class="social" aria-label="social links" data-testid="test-user-social-links">
+              <ul>
+                <li>
+                  <a href="https://x.com/kingkreations01" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a>
+                </li>
+                <li>
+                  <a href="https://www.github.com/kingkreation" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/joshua-kolawole-40062a287/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+        </header>
+
+        <main>
+          <div class="lists" aria-label="hobbies and dislikes container">
+            <section class="l-section" aria-labelledby="hobbies-title">
+              <h3 id="hobbies-title">Hobbies</h3>
+              <ul class="simple" data-testid="test-user-hobbies" aria-label="user hobbies list">
+                <li data-testid="test-user-hobby-1">Playing musical instruments and live performance</li>
+                <li data-testid="test-user-hobby-2">Frontend web development and creative coding</li>
+                <li data-testid="test-user-hobby-3">Graphic design and digital creativity</li>
+                <li data-testid="test-user-hobby-4">Public speaking and team leadership</li>
+                <li data-testid="test-user-hobby-5">Exploring new technology and personal development</li>
+              </ul>
+            </section>
+
+            <section class="l-section" aria-labelledby="dislikes-title">
+              <h3 id="dislikes-title">Dislikes</h3>
+              <ul class="simple" data-testid="test-user-dislikes" aria-label="user dislikes list">
+                <li data-testid="test-user-dislike-1">I dislike disorganization and lack of accountability.</li>
+                <li data-testid="test-user-dislike-2">I’m not a fan of procrastination or poor communication</li>
+                <li data-testid="test-user-dislike-3">I’m not comfortable with carelessness or lack of teamwork.</li>
+                <li data-testid="test-user-dislike-4">I dislike situations where people underestimate others’ potential.</li>
+                <li data-testid="test-user-dislike-5">I dislike giving up easily on challenges.</li>
+              </ul>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <div data-testid="test-user-last-updated">HNG Frontend Wizard</div>
+      <div>Built for Stage 0 Task</div>
+    </div>
+  </article>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

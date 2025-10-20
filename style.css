@@ -1,0 +1,231 @@
+:root {
+  --card-bg: #ffffff;
+  --accent: #0b5fff;
+  --muted: #6b7280;
+  --radius: 12px;
+  --gap: 16px;
+  --max-width: 880px;
+}
+
+/* Reset-ish for predictable layout */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #f6f8fb, #ffffff);
+  color: #0f172a;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Card */
+.profile-card {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(12, 24, 48, 0.08);
+  display: grid;
+  gap: var(--gap);
+}
+
+/* Layout: stacked on narrow screens, avatar left on wider ones */
+.profile-grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 720px) {
+  .profile-grid {
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+  }
+}
+
+article[data-testid="test-profile-card"] {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article[data-testid="test-profile-card"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+figure.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+figure.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+header.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+h2.name {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+p.bio {
+  margin: 0;
+  color: #0f172a;
+  line-height: 1.45;
+}
+
+.meta-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.time-chip {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size: 0.875rem;
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #0f172a;
+}
+
+/* Social links */
+nav.social {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+nav.social ul {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #0b1220;
+  font-weight: 600;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+nav.social a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(11,95,255,0.18);
+  outline-offset: 3px;
+}
+
+/* Base style for all social icons */
+[data-testid="test-user-social-links"] a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.2rem;
+  margin: 0 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover animation */
+[data-testid="test-user-social-links"] a:hover {
+  transform: scale(1.15);
+}
+
+/* Platform-specific hover colors */
+[data-testid="test-user-social-twitter"]:hover {
+  color: black; 
+}
+
+[data-testid="test-user-social-linkedin"]:hover {
+  color: #0A66C2;
+}
+
+[data-testid="test-user-social-github"]:hover {
+  color: dimgrey;
+}
+
+/* Lists */
+.lists {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .lists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+section.l-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid rgba(2,6,23,0.03);
+}
+
+section.l-section h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+}
+
+ul.simple {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+/* small footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  figure.avatar img { width: 120px; height: 120px; }
+}
