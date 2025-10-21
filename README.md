@@ -28,12 +28,12 @@ It includes semantic HTML structure, accessible markup, and automated test compa
 ---
 
 ## 🖼️ Live Demo
-[View on Netlify](https://your-netlify-link.netlify.app)
+[View on Github](https://kingkreation.github.io/HNG_Stage_0/)
 
 ## 💻 Run Locally
 To run the project locally:
 ```bash
-git clone https://github.com/yourusername/profile-card.git
+git clone https://github.com/kingkreation/HNG_Stage_0.git
 cd profile-card
 open index.html
 
