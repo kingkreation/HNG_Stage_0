@@ -229,3 +229,19 @@ ul.simple {
 @media (max-width: 560px) {
   figure.avatar img { width: 120px; height: 120px; }
 }
+
+.page-nav {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.page-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+.page-nav a:hover {
+  text-decoration: underline;
+}
