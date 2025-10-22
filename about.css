@@ -2,7 +2,7 @@
 .about-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .about-section {
