@@ -53,7 +53,7 @@
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* Small-screen tweaks for better spacing on mobile */
 @media (max-width: 640px) {
   .about-page {
     padding: 1rem;

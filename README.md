@@ -1,40 +1,71 @@
-# Profile Card – Stage 0 Project
+# Profile Card + Stage 1
 
-## 👤 Description
-This is a responsive profile card built as part of the Stage 0 Frontend Project.  
-It includes semantic HTML structure, accessible markup, and automated test compatibility.
+Hi, this repo started as a compact profile card and now includes two extra pages for the Stage 1 task: an About page and a Contact page with accessible form validation. The project focuses on simple, semantic HTML, accessible markup, and a responsive layout that works well on phones and desktops.
 
-## 🧩 Features
-- Semantic HTML structure (`article`, `section`, `figure`, `nav`)
-- Dynamic real-time clock (milliseconds)
-- Responsive layout for mobile, tablet, and desktop
-- Accessible focus and hover states
-- Avatar with `alt` text and `data-testid="test-user-avatar"`
+## What you'll find here
 
-## 🧪 Automated Test Checklist
-- Avatar has data-testid="test-user-avatar"
-- Time updates with Date.now() value
-- Social links accessible and testable
-- Hobbies and dislikes separated correctly
-- Responsive and keyboard navigable
+- `index.html` — the profile card (avatar, name, bio, hobbies).
+- `about.html` — a short, reflective About Me page (bio, goals, areas to improve, note to future self).
+- `contact.html` — a Contact Us page with client-side form validation and clear ARIA associations.
+- `style.css` — shared styles for the whole site (layout, header, card styles).
+- `about.css`, `contact.css` — small page-specific styles.
+- `script.js` — small helpers used on the profile card (live time, accessibility helpers).
+- `contact.js` — form validation for the Contact page.
+- `nav.js` — mobile-friendly header navigation behavior.
 
-## 👨‍💻 Author
+## Key features and accessibility
+
+- Semantic markup: `main`, `section`, `article`, `figure`, and proper headings.
+- Accessible forms: every input has a `<label>` and errors are linked via `aria-describedby`.
+- Keyboard friendly: focus styles and keyboard navigation supported throughout.
+- Responsive: header collapses into a hamburger menu on small screens and pages scale to various widths.
+- Test-friendly attributes: key elements include `data-testid` attributes used by automated checks.
+
+## Author
 
 - Joshua Kolawole (De King)
 - Frontend Developer | QA Engineer | Graphic Designer
-- Twitter: @kingkreations01
-- LinkedIn: Joshua Kolawole
+- [Email Me: kolawolejoshua459@gmail.com](mailto:kolawolejoshua459@gmail.com)  
+- [LinkedIn](https://www.linkedin.com/in/joshua-kolawole-40062a287/) | [GitHub](https://github.com/kingkreation)
+
+
+## Contact form validation rules
+
+- All fields are required.
+- Email must be a valid address (basic client-side check).
+- Message must be at least 10 characters.
+- On successful submit a confirmation message is shown (and the form resets).
+
+## Quick local preview
+
+You don't need anything fancy, just open the files in your browser. From a terminal:
+
+```powershell
+git clone https://github.com/kingkreation/HNG_Stage_0.git
+cd HNG_Stage_0
+# Open the HTML files in your browser (Windows) — double-click or use `start`:
+start index.html
+```
+
+If you'd rather serve the files from a tiny HTTP server (recommended for consistent link behavior):
+
+```powershell
+# If you have Python 3 installed
+python -m http.server 8000
+# then open http://localhost:8000/index.html
+```
+
+## Automated test hints
+
+- Look for the `data-testid` attributes when writing tests.
+- The profile time uses `Date.now()` and updates regularly so tests can read a stable millisecond value.
 
 ---
 
-## 🖼️ Live Demo
-[View on Github](https://kingkreation.github.io/HNG_Stage_0/)
+⭐ *If you like this project, consider giving it a star on GitHub!*  
+💡 *Built with passion, curiosity, and purpose.*
 
-## 💻 Run Locally
-To run the project locally:
-```bash
-git clone https://github.com/kingkreation/HNG_Stage_0.git
-cd profile-card
-open index.html
+
+---
 
 

@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelector('.nav-links');
 
   if (mobileMenuBtn && navLinks) {
+    // Toggle the mobile menu when the hamburger is clicked.
     mobileMenuBtn.addEventListener('click', function() {
       navLinks.classList.toggle('active');
-      // Update ARIA attributes
+      // Keep ARIA in sync for screen readers.
       const isExpanded = navLinks.classList.contains('active');
       mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
     });

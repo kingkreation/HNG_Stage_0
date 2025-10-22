@@ -1,18 +1,20 @@
-// Profile card behavior, uses Date.now() for testable time value
+// Live clock and small accessibility helpers for the profile card.
+// The clock uses Date.now() so automated tests can read a stable timestamp.
 document.addEventListener('DOMContentLoaded', function() {
   (function() {
     const timeEl = document.querySelector('[data-testid="test-user-time"]');
     if (!timeEl) return;
     
+    // Update the visible time to the current millisecond value.
     function setNow() {
       const now = Date.now();
       timeEl.textContent = String(now);
     }
     
-    // Set now immediately so tests reading value right after render see Date.now() close to real time
+    // Show the current time immediately so tests that read it right away see a recent value.
     setNow();
     
-    // Update regularly, 250ms keeps it live without being noisy
+    // Keep the clock reasonably live without being too chatty.
     const interval = setInterval(setNow, 250);
     
     // Ensure social links are keyboard focusable and open safely
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       clearInterval(interval);
     });
     
-    // Expose a tiny debug helper on the window for test debugging if needed
+    // Small helper exposed for debugging or automated tests.
     window.__profileCardDebug = {
       getTimeValue() { return Number(timeEl.textContent); },
       setAvatar(src) {

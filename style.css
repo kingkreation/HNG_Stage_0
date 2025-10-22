@@ -106,7 +106,7 @@ body {
   gap: var(--gap);
 }
 
-/* Layout: stacked on narrow screens, avatar left on wider ones */
+/* Layout behavior: stacked on phones, avatar to the left on wider screens */
 .profile-grid {
   display: grid;
   gap: var(--gap);
